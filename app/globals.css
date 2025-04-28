@@ -18,6 +18,7 @@
       #252525);
   --highligter-color: rgb(0, 255, 179);
   --danger-color: red;
+  --danger-color-2: rgb(128, 0, 113);
 }
 
 
@@ -45,4 +46,80 @@ body {
 ::-webkit-scrollbar-thumb {
   background: var(--text-color);
   cursor: pointer;
+}
+
+header {
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  position: relative;
+  overflow: hidden;
+
+  /* Frosted glass effect */
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+header h1 {
+  font-family: var(--font-montserrat), sans-serif;
+  letter-spacing: 5px;
+}
+
+header h3 {
+  font-family: var(--font-poppins), sans-serif;
+}
+
+.heart1 {
+  position: absolute;
+  top: 20%;
+  left: 20px;
+  /* you missed 'px' after 10 */
+  height: 100px;
+  width: 100px;
+  font-size: 100px;
+  color: red;
+  transform: rotate(-60deg);
+  animation: scalePulse 2s infinite ease-in-out;
+}
+
+@keyframes scalePulse {
+
+  0%,
+  100% {
+    transform: rotate(-60deg) scale(0.7);
+  }
+
+  50% {
+    transform: rotate(60deg) scale(1);
+    color: var(--danger-color-2);
+  }
+}
+
+.heart2 {
+  position: absolute;
+  top: 20%;
+  right: 20;
+  height: 100px;
+  width: 100px;
+  font-size: 100px;
+  color: red;
+  transform: rotate(60deg);
+  animation: scalePulse2 2s infinite ease-in-out;
+}
+
+@keyframes scalePulse2 {
+
+  0%,
+  100% {
+    transform: rotate(60deg) scale(0.7);
+  }
+
+  50% {
+    transform: rotate(-60deg) scale(1);
+    color: var(--danger-color-2);
+  }
 }
