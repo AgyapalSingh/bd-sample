@@ -4,6 +4,7 @@
 
 :root {
   --bg-color: #000000;
+  --bg-color-2: #1e1e1e;
   --text-color: #ffffff;
   --tex-color-secondary: #acacac;
   --hover-color: #525252;
@@ -150,9 +151,8 @@ body {
   color: var(--danger-color-2);
 }
 
-
 header {
-  height: 100px;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -160,92 +160,71 @@ header {
   gap: 20px;
   position: relative;
   overflow: hidden;
-
-  /* Frosted glass effect */
-  background: rgba(255, 255, 255, 0.064);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(10px);
+  background-color: var(--bg-color-2);
 }
 
-header h1 {
-  font-family: var(--font-dancingScript), sans-serif;
+.ag-header-container {
+  width: 80%;
+  display: flex;
+}
+
+.ag-header-image {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.ag-header-image img {
+  border-radius: 20px;
+}
+
+.ag-header-content {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+}
+
+.ag-header-content h1 {
+  font-family: var(--font-montserrat);
+  color: var(--text-color);
   font-size: 3rem;
-  text-align: center;
-  font-weight: 300;
+  letter-spacing: 2px;
 }
 
-header h3 {
-  font-family: var(--font-poppins), sans-serif;
-  text-align: center;
-  font-weight: 300;
+.ag-header-content .ag-header-content-sp {
+  color: var(--hover-color);
 }
-
-.heart1 {
-  position: absolute;
-  top: 0%;
-  left: 20px;
-  font-size: 80px;
-  color: red;
-  transform: rotate(-60deg);
-  animation: scalePulse 2s infinite ease-in-out;
-}
-
-@keyframes scalePulse {
-
-  0%,
-  100% {
-    transform: rotate(-60deg) scale(0.7);
-  }
-
-  50% {
-    transform: rotate(60deg) scale(0.9);
-    color: var(--danger-color-2);
-  }
-}
-
-.heart2 {
-  position: absolute;
-  top: 0%;
-  right: 20px;
-  font-size: 80px;
-  color: red;
-  transform: rotate(60deg);
-  animation: scalePulse2 2s infinite ease-in-out;
-}
-
-@keyframes scalePulse2 {
-
-  0%,
-  100% {
-    transform: rotate(60deg) scale(0.7);
-  }
-
-  50% {
-    transform: rotate(-60deg) scale(0.9);
-    color: var(--danger-color-2);
-  }
-}
-
 
 @media screen and (max-width: 768px) {
-  header h1 {
-    font-size: 2rem;
+  header {
+    justify-content: space-between;
   }
 
-  header h3 {
-    font-size: 1rem;
+  .ag-header-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
   }
 
-  .heart1 {
-    font-size: 50px;
-    top: 25%;
-    left: 5px;
+  .ag-header-image {
+    width: 100%;
+    padding: 20px;
   }
 
-  .heart2 {
-    font-size: 50px;
-    top: 25%;
-    right: 5px;
+  .ag-header-image img {
+    height: 380px;
+    width: auto;
+  }
+
+  .ag-header-content {
+    width: 100%;
+    align-items: center;
   }
 }
 
@@ -301,6 +280,7 @@ header h3 {
   align-items: center;
   justify-content: center;
   height: 100vh;
+  background-color: var(--bg-color-2);
 }
 
 .ag-photo-gallery {
