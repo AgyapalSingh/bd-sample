@@ -5,6 +5,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Header from "./Components/Header";
 import IntroLoader from "./Components/LoadersComponent/IntroLoader";
 import LoveMessage from "./Components/HomePageComponent/LoveMessage";
+import PhotoGallery from "./Components/HomePageComponent/PhotoGallery";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -28,6 +29,10 @@ export default function Home() {
         <Header />
         <section className="ag-love-message-section">
           <LoveMessage />
+        </section>
+
+        <section className="ag-photo-gallery-section">
+          <PhotoGallery />
         </section>
       </div>
     </>

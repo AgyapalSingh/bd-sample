@@ -236,6 +236,8 @@ header h3 {
   display: flex;
   align-items: center;
   justify-content: center;
+  height: 100vh;
+  border: 1px solid red;
 }
 
 .ag-love-message {
@@ -249,7 +251,6 @@ header h3 {
   justify-content: center;
   position: relative;
   background-color: var(--highligter-color);
-  margin-top: 100px;
 }
 
 
@@ -272,5 +273,72 @@ header h3 {
     width: 95%;
     height: 300px;
     margin-top: 50px;
+  }
+}
+
+/*  PHOTO GALLERY */
+
+.ag-photo-gallery-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  border: 1px solid red;
+}
+
+.ag-photo-gallery {
+  position: relative;
+  display: flex;
+  flex-wrap: nowrap;
+  white-space: nowrap;
+  overflow: hidden;
+  gap: 20px;
+  padding: 20px;
+  justify-content: start;
+  scroll-behavior: smooth;
+}
+
+/* Add fade effect on both sides */
+.ag-photo-gallery::before,
+.ag-photo-gallery::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 100px;
+  height: 100%;
+  z-index: 10;
+  pointer-events: none;
+}
+
+.ag-photo-gallery::before {
+  left: 0;
+  background: linear-gradient(to right, rgb(31, 31, 31), transparent);
+}
+
+.ag-photo-gallery::after {
+  right: 0;
+  background: linear-gradient(to left, rgb(31, 31, 31), transparent);
+}
+
+.ag-photo-item {
+  border-radius: 10px;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.ag-photo-item:hover {
+  transform: scale(1.05);
+}
+
+.ag-photo-track {
+  display: inline-flex;
+  gap: 20px;
+}
+
+
+@media screen and (max-width: 768px) {
+  .ag-photo-gallery::before,
+  .ag-photo-gallery::after {
+    width: 20px;
   }
 }
