@@ -132,6 +132,25 @@ body {
 }
 
 
+.ag-mute-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 999;
+  color: var(--danger-color);
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: 32px;
+  cursor: pointer;
+}
+
+.ag-mute-button:hover {
+  transform: scale(1.1);
+  color: var(--danger-color-2);
+}
+
+
 header {
   height: 100px;
   display: flex;
@@ -237,7 +256,6 @@ header h3 {
   align-items: center;
   justify-content: center;
   height: 100vh;
-  border: 1px solid red;
 }
 
 .ag-love-message {
@@ -283,7 +301,6 @@ header h3 {
   align-items: center;
   justify-content: center;
   height: 100vh;
-  border: 1px solid red;
 }
 
 .ag-photo-gallery {
@@ -329,12 +346,10 @@ header h3 {
   transform: scale(1.05);
 }
 
-
 .ag-photo-track {
   display: inline-flex;
   gap: 20px;
 }
-
 
 @media screen and (max-width: 768px) {
 
