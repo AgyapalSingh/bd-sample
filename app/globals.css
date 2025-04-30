@@ -320,15 +320,15 @@ header h3 {
   background: linear-gradient(to left, rgb(31, 31, 31), transparent);
 }
 
-.ag-photo-item {
+.ag-photo-item img {
   border-radius: 10px;
-  overflow: hidden;
-  flex-shrink: 0;
+  transition: transform 0.3s ease-in-out;
 }
 
-.ag-photo-item:hover {
+.ag-photo-item img:hover {
   transform: scale(1.05);
 }
+
 
 .ag-photo-track {
   display: inline-flex;
@@ -337,6 +337,7 @@ header h3 {
 
 
 @media screen and (max-width: 768px) {
+
   .ag-photo-gallery::before,
   .ag-photo-gallery::after {
     width: 20px;
