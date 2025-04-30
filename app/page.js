@@ -4,6 +4,7 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Header from "./Components/Header";
 import IntroLoader from "./Components/LoadersComponent/IntroLoader";
+import LoveMessage from "./Components/HomePageComponent/LoveMessage";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -25,6 +26,9 @@ export default function Home() {
 
       <div className={`ag-main-content ${showIntro ? "hidden" : "visible"}`}>
         <Header />
+        <section className="ag-love-message-section">
+          <LoveMessage />
+        </section>
       </div>
     </>
   );

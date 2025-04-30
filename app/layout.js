@@ -1,5 +1,10 @@
-import { Montserrat, Poppins } from "next/font/google";
+import { Montserrat, Poppins, Dancing_Script } from "next/font/google";
 import "./globals.css";
+
+const dancingScript = Dancing_Script({
+  subsets: ["latin"],
+  weight: ["400", "700"],
+});
 
 const montserrat = Montserrat({
   subsets: ["latin"],
@@ -21,7 +26,9 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${montserrat.variable} ${poppins.variable}`}>
+      <body
+        className={`${montserrat.variable} ${poppins.variable} ${dancingScript.variable}`}
+      >
         {children}
       </body>
     </html>
