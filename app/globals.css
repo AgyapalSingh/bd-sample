@@ -21,8 +21,8 @@
       #262626,
       #252525);
   --highligter-color: rgb(0, 255, 179);
-  --danger-color: red;
-  --danger-color-2: rgb(128, 0, 113);
+  --danger-color: rgb(188, 48, 48);
+  --danger-color-2: rgb(255, 255, 255);
   --left-door: rgb(64, 64, 64);
   --right-door: rgb(189, 189, 189);
 }
@@ -133,7 +133,7 @@ body {
 
 
 header {
-  height: 200px;
+  height: 100px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -143,28 +143,29 @@ header {
   overflow: hidden;
 
   /* Frosted glass effect */
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.064);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(10px);
 }
 
 header h1 {
   font-family: var(--font-montserrat), sans-serif;
-  letter-spacing: 5px;
+  font-size: 3rem;
+  text-align: center;
+  font-weight: 300;
 }
 
 header h3 {
   font-family: var(--font-poppins), sans-serif;
+  text-align: center;
+  font-weight: 300;
 }
 
 .heart1 {
   position: absolute;
-  top: 20%;
+  top: 0%;
   left: 20px;
-  /* you missed 'px' after 10 */
-  height: 100px;
-  width: 100px;
-  font-size: 100px;
+  font-size: 80px;
   color: red;
   transform: rotate(-60deg);
   animation: scalePulse 2s infinite ease-in-out;
@@ -178,18 +179,16 @@ header h3 {
   }
 
   50% {
-    transform: rotate(60deg) scale(1);
+    transform: rotate(60deg) scale(0.9);
     color: var(--danger-color-2);
   }
 }
 
 .heart2 {
   position: absolute;
-  top: 20%;
-  right: 20;
-  height: 100px;
-  width: 100px;
-  font-size: 100px;
+  top: 0%;
+  right: 20px;
+  font-size: 80px;
   color: red;
   transform: rotate(60deg);
   animation: scalePulse2 2s infinite ease-in-out;
@@ -203,7 +202,30 @@ header h3 {
   }
 
   50% {
-    transform: rotate(-60deg) scale(1);
+    transform: rotate(-60deg) scale(0.9);
     color: var(--danger-color-2);
+  }
+}
+
+
+@media screen and (max-width: 768px) {
+  header h1 {
+    font-size: 2rem;
+  }
+
+  header h3 {
+    font-size: 1rem;
+  }
+
+  .heart1 {
+    font-size: 50px;
+    top: 25%;
+    left: 5px;
+  }
+
+  .heart2 {
+    font-size: 50px;
+    top: 25%;
+    right: 5px;
   }
 }

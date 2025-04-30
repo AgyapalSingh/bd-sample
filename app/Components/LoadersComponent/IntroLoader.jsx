@@ -105,6 +105,7 @@ const IntroLoader = ({ onFinish }) => {
             alt="Description of image"
             width={300}
             height={450}
+            priority
           />
         </div>
         <p className="ag-intro-logo-title">Welcome Baby Girl</p>

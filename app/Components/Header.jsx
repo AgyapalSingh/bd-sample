@@ -4,7 +4,7 @@ const Header = () => {
   return (
     <header>
       <h1>Kakeeeeee !!!!!</h1>
-      <h3>HAPPY BIRTH DAYYYYYY !!!!!</h3>
+      {/* <h3>HAPPY BIRTH DAYYYYYY !!!!!</h3> */}
 
       <div className="heart1">
         <FaHeart />
