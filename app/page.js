@@ -7,6 +7,7 @@ import IntroLoader from "./Components/LoadersComponent/IntroLoader";
 import LoveMessage from "./Components/HomePageComponent/LoveMessage";
 import PhotoGallery from "./Components/HomePageComponent/PhotoGallery";
 import { HiSpeakerWave, HiSpeakerXMark } from "react-icons/hi2";
+import LoveReason from "./Components/HomePageComponent/LoveReason";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -62,6 +63,9 @@ export default function Home() {
         </section>
         <section className="ag-photo-gallery-section">
           <PhotoGallery />
+        </section>
+        <section className="ag-reasons-section">
+          <LoveReason />
         </section>
       </div>
     </>

@@ -338,3 +338,47 @@ header {
     width: 20px;
   }
 }
+
+
+.ag-reasons-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.ag-reasons-container {
+  padding: 20px;
+  text-align: center;
+  background-color: var(--bg-color-2);
+  border-radius: 20px;
+}
+
+.ag-reasons-container h2 {
+  font-size: 1.5rem;
+  font-family: var(--font-montserrat);
+  margin-bottom: 50px;
+}
+
+.ag-reasons-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 20px auto;
+  max-width: 500px;
+  text-align: left;
+}
+
+.ag-reason-item {
+  font-size: 1rem;
+  margin-bottom: 15px;
+  opacity: 0;
+  transform: translateY(30px);
+  font-family: var(--font-poppins);
+}
+
+@media screen and (max-width: 768px) {
+
+  .ag-reasons-container {
+    width: 95%;
+  }
+}
