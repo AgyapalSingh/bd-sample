@@ -1,5 +1,6 @@
 import { Montserrat, Poppins, Dancing_Script } from "next/font/google";
 import "./globals.css";
+import SmoothScrolling from "./Components/SmoothScrolling";
 
 const dancingScript = Dancing_Script({
   subsets: ["latin"],
@@ -29,7 +30,7 @@ export default function RootLayout({ children }) {
       <body
         className={`${montserrat.variable} ${poppins.variable} ${dancingScript.variable}`}
       >
-        {children}
+        <SmoothScrolling>{children}</SmoothScrolling>
       </body>
     </html>
   );
