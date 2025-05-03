@@ -235,6 +235,11 @@ header {
   align-items: center;
   justify-content: center;
   height: 100vh;
+  background-image: url("/images/Love-Message.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .ag-love-message {
@@ -402,70 +407,58 @@ header {
   position: relative;
   text-align: center;
   padding: 4rem 1rem;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
 }
 
-.lock-icon,
-.heart-icon {
-  font-size: 3rem;
-  color: #e63946;
+.secret-overlay-left {
+  background-color: rgb(101, 53, 69);
+  height: 100%;
+  width: 50%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.secret-overlay-right {
+  background-color: rgb(60, 20, 49);
+  height: 100%;
+  width: 50%;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.secret-loker-btn {
+  background-color: rgb(180, 20, 71);
+  outline: none;
+  border: none;
+  height: 50px;
+  width: 150px;
   cursor: pointer;
-  transition: transform 0.3s ease;
-  display: inline-block;
-}
-
-.lock-icon:hover {
-  transform: scale(1.2);
-}
-
-.heart-icon {
-  font-size: 3rem;
-  color: #e63946;
-  cursor: default;
-  transition: transform 0.3s ease;
-  display: inline-block;
-  /* keep it inline, but let gsap animate opacity/scale */
-  opacity: 0;
-  /* hide initially via opacity only */
-}
-
-
-.heart-icon.show {
-  display: inline-block;
-}
-
-.secret-message {
-  margin-top: 2rem;
-  font-size: 1.5rem;
-  color: #333;
-  opacity: 0;
-}
-
-.glow-bg {
+  font-family: var(--font-dancingScript);
+  color: var(--text-color);
+  font-size: 1.4rem;
+  border-radius: 5px;
+  text-decoration: underline;
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 300px;
-  height: 300px;
-  background: radial-gradient(circle, rgba(255, 192, 203, 0.5), transparent 70%);
-  border-radius: 50%;
   transform: translate(-50%, -50%);
   animation: pulse 2s infinite ease-in-out;
-  z-index: -1;
 }
 
 @keyframes pulse {
   0% {
     transform: translate(-50%, -50%) scale(1);
-    opacity: 0.6;
   }
 
   50% {
-    transform: translate(-50%, -50%) scale(1.2);
-    opacity: 1;
+    transform: translate(-50%, -50%) scale(1.1);
   }
 
   100% {
     transform: translate(-50%, -50%) scale(1);
-    opacity: 0.6;
   }
 }
