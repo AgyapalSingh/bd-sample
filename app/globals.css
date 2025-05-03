@@ -345,6 +345,11 @@ header {
   align-items: center;
   justify-content: center;
   height: 100vh;
+  background-image: url("/images/Reasons-p.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .ag-reasons-container {
@@ -352,6 +357,7 @@ header {
   text-align: center;
   background-color: var(--bg-color-2);
   border-radius: 20px;
+
 }
 
 .ag-reasons-container h2 {
