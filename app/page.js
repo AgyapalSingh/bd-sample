@@ -10,6 +10,7 @@ import { HiSpeakerWave, HiSpeakerXMark } from "react-icons/hi2";
 import LoveReason from "./Components/HomePageComponent/LoveReason";
 import GiftGallery from "./Components/HomePageComponent/GiftGallery";
 import SecretMessage from "./Components/HomePageComponent/SecretMessage";
+import StarrySection from "./Components/HomePageComponent/StarrySection";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -71,6 +72,9 @@ export default function Home() {
         </section>
         <section className="ag-photo-gallery-section">
           <GiftGallery />
+        </section>
+        <section className="ag-StarrySection-section">
+          <StarrySection />
         </section>
         <section className="ag-secret-message-section">
           <SecretMessage />
