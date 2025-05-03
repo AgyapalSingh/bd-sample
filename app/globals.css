@@ -382,3 +382,84 @@ header {
     width: 95%;
   }
 }
+
+
+.ag-secret-message-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+
+.secret-container {
+  position: relative;
+  text-align: center;
+  padding: 4rem 1rem;
+}
+
+.lock-icon,
+.heart-icon {
+  font-size: 3rem;
+  color: #e63946;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  display: inline-block;
+}
+
+.lock-icon:hover {
+  transform: scale(1.2);
+}
+
+.heart-icon {
+  font-size: 3rem;
+  color: #e63946;
+  cursor: default;
+  transition: transform 0.3s ease;
+  display: inline-block;
+  /* keep it inline, but let gsap animate opacity/scale */
+  opacity: 0;
+  /* hide initially via opacity only */
+}
+
+
+.heart-icon.show {
+  display: inline-block;
+}
+
+.secret-message {
+  margin-top: 2rem;
+  font-size: 1.5rem;
+  color: #333;
+  opacity: 0;
+}
+
+.glow-bg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(circle, rgba(255, 192, 203, 0.5), transparent 70%);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  animation: pulse 2s infinite ease-in-out;
+  z-index: -1;
+}
+
+@keyframes pulse {
+  0% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 0.6;
+  }
+
+  50% {
+    transform: translate(-50%, -50%) scale(1.2);
+    opacity: 1;
+  }
+
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 0.6;
+  }
+}

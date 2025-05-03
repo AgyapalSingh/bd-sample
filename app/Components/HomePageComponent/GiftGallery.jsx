@@ -9,11 +9,15 @@ const images = [
   "/gifts/Phone-1.png",
   "/gifts/Music-1.png",
   "/gifts/Googles.png",
+  "/gifts/Per-1.png",
+  "/gifts/Per-2.png",
   "/gifts/Car-1.png",
   "/gifts/Car-2.png",
   "/gifts/Phone-1.png",
   "/gifts/Music-1.png",
   "/gifts/Googles.png",
+  "/gifts/Per-1.png",
+  "/gifts/Per-2.png",
 ];
 
 const GiftGallery = () => {
