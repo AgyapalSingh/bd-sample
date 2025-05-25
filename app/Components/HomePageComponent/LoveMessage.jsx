@@ -19,7 +19,7 @@ const LoveMessage = () => {
         <Typewriter
           options={{
             strings: [
-              "' You make my world beautiful 🌸 '",
+              "' You make my world beautiful 🌸 Test '",
               "' Every moment with you is a memory ❤️ '",
               "' I love you more every single day 🥰 '",
             ],
