@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import gsap from "gsap";
+import Image from "next/image";
 import { FaUnlockAlt } from "react-icons/fa";
 
 const SecretMessage = () => {
@@ -35,7 +36,14 @@ const SecretMessage = () => {
       <div className="secret-overlay-left"></div>
       <div className="secret-overlay-right"></div>
       <div className="secret-message" style={{ opacity: 0 }}>
-        You are the most precious part of my life 💖
+        <p>You are the most precious part of my life 💖</p>
+        <Image
+          src="/images/OG-1.png"
+          alt="Description of image"
+          width={300}
+          height={450}
+          priority
+        />
       </div>
       {!unlocked && (
         <button className="secret-loker-btn" onClick={handleUnlock}>
